@@ -103,6 +103,4 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UINavigationCo
         self.view.endEditing(true)
         return false
     }
-    
-
 }

@@ -22,7 +22,7 @@ class Client: NSObject {
     // MARK: -- GET Method
     /***************************************************************/
     
-    func taskForGETMethod(urlString: String, headerFields: [String:String], client: String, _ completionHandlerForGETMethod: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask {
+    func taskForGETMethod(urlString: String, headerFields: [String : String], client: String, _ completionHandlerForGETMethod: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionDataTask {
         
         /* Build the URL, Configure the request */
         let urlString = urlString
@@ -117,7 +117,7 @@ class Client: NSObject {
                     if urlString == UdacityClient.Constants.SessionURL {
                         let range = Range(uncheckedBounds: (5, data.count))
                         let newData = data.subdata(in: range)
-                        /* Parse the data and use the data (happens in completion handler) */
+                        /* Parse the data and use the data */
                         self.convertDataWithCompletionHandler(newData, completionHandlerForConvertData: completionHandlerForPOSTMethod)
                     }
                 } else {
@@ -135,7 +135,7 @@ class Client: NSObject {
             if urlString == UdacityClient.Constants.SessionURL {
                 let range = Range(uncheckedBounds: (5, data.count))
                 let newData = data.subdata(in: range) /* subset response data! */
-                /* Parse the data and use the data (happens in completion handler) */
+                /* Parse the data and use the data */
                 self.convertDataWithCompletionHandler(newData, completionHandlerForConvertData: completionHandlerForPOSTMethod)
             } else {
                 self.convertDataWithCompletionHandler(data, completionHandlerForConvertData: completionHandlerForPOSTMethod)

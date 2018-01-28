@@ -47,7 +47,7 @@ class SubmitLocationMapViewController: UIViewController, MKMapViewDelegate {
         annotation.subtitle = StudentData.mediaURL
         annotations.append(annotation)
         
-        //zoom into an appropriate region
+        /* Zoom into a specific region */
         let span = MKCoordinateSpanMake(1, 1)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         

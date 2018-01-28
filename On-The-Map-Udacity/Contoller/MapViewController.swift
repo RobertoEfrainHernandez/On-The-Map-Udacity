@@ -35,7 +35,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 performUIUpdatesOnMain {
                     self.populateMapView()
                 }
-            }else{
+            } else {
                 performUIUpdatesOnMain {
                     self.displayAlert(title: "Invalid URL", message: "Unable to get student locations.")
                 }
@@ -98,10 +98,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 if let url = URL(string: urlString!) {
                     if app.canOpenURL(url) {
                         app.open(url, options: [:], completionHandler: nil)
-                    }else{
+                    } else {
                         displayAlert(title: "Invalid URL", message: "Selected URL unable to be opened.")
                     }
-                }else{
+                } else {
                     displayAlert(title: "Invalid URL", message: "Not a valid URL.")
                 }
             }
