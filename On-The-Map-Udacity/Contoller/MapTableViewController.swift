@@ -58,4 +58,20 @@ class MapTableViewController: UITableViewController {
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    /* Delete Feature */
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            // delete item at indexPath
+            StudentData.studentLocations.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            print(StudentData.studentLocations)
+        }
+    
+        return [delete]
+        
+    }
+
 }
+
