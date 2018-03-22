@@ -19,9 +19,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UINavigationCo
     @IBOutlet weak var udacityLogo: UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: BorderedButton!
-    @IBOutlet weak var haveAccountLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet var panToClose: InteractionPanToClose!
     
     // Mark: - Properties
     /***************************************************************/
@@ -30,9 +30,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UINavigationCo
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        /* Textfield Delegates */
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        /* Pan To Close Setup Gesture */
+        panToClose.setGestureRecognizer()
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {

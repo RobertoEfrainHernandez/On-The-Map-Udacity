@@ -22,7 +22,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        mapView.delegate = self
+//        mapView.delegate = self
         getUserInfo()
     }
 
@@ -103,8 +103,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                     }
                 } else {
                     displayAlert(title: "Invalid URL", message: "Not a valid URL.")
+                    }
                 }
             }
         }
     }
-}

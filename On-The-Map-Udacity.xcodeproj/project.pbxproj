@@ -28,9 +28,13 @@
 		5729CF36201C0F25002B41F9 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5729CF35201C0F25002B41F9 /* MapTableViewCell.swift */; };
 		5729CF38201C1D72002B41F9 /* AddNewLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5729CF37201C1D72002B41F9 /* AddNewLocationViewController.swift */; };
 		5729CF3A201C1D95002B41F9 /* SubmitLocationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5729CF39201C1D95002B41F9 /* SubmitLocationMapViewController.swift */; };
+		5794EB1A20634F4100F6A867 /* InteractionPanToClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794EB1920634F4100F6A867 /* InteractionPanToClose.swift */; };
+		68555C28D758003F0AAE5563 /* Pods_On_The_Map_Udacity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF9D2D8DE6A031491463CB3 /* Pods_On_The_Map_Udacity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20D91F902103F8E07ECFDEAB /* Pods-On-The-Map-Udacity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-On-The-Map-Udacity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-On-The-Map-Udacity/Pods-On-The-Map-Udacity.debug.xcconfig"; sourceTree = "<group>"; };
+		546164FD00D047939E84366E /* Pods-On-The-Map-Udacity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-On-The-Map-Udacity.release.xcconfig"; path = "Pods/Target Support Files/Pods-On-The-Map-Udacity/Pods-On-The-Map-Udacity.release.xcconfig"; sourceTree = "<group>"; };
 		5729CEFE201BDAC4002B41F9 /* On-The-Map-Udacity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On-The-Map-Udacity.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5729CF01201BDAC4002B41F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5729CF06201BDAC4002B41F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		5729CF35201C0F25002B41F9 /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
 		5729CF37201C1D72002B41F9 /* AddNewLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLocationViewController.swift; sourceTree = "<group>"; };
 		5729CF39201C1D95002B41F9 /* SubmitLocationMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitLocationMapViewController.swift; sourceTree = "<group>"; };
+		5794EB1920634F4100F6A867 /* InteractionPanToClose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionPanToClose.swift; sourceTree = "<group>"; };
+		EAF9D2D8DE6A031491463CB3 /* Pods_On_The_Map_Udacity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_On_The_Map_Udacity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68555C28D758003F0AAE5563 /* Pods_On_The_Map_Udacity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +79,8 @@
 			children = (
 				5729CF00201BDAC4002B41F9 /* On-The-Map-Udacity */,
 				5729CEFF201BDAC4002B41F9 /* Products */,
+				C0805884ED2CE92FB3F47364 /* Pods */,
+				F23955E967FEB76FBBFAEBFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +146,7 @@
 				5729CF0D201BDAC4002B41F9 /* Info.plist */,
 				5729CF17201BDC98002B41F9 /* HelperMethods.swift */,
 				5729CF19201BDE33002B41F9 /* GCDBlackBox.swift */,
+				5794EB1920634F4100F6A867 /* InteractionPanToClose.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -160,6 +170,23 @@
 			path = Parse;
 			sourceTree = "<group>";
 		};
+		C0805884ED2CE92FB3F47364 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20D91F902103F8E07ECFDEAB /* Pods-On-The-Map-Udacity.debug.xcconfig */,
+				546164FD00D047939E84366E /* Pods-On-The-Map-Udacity.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F23955E967FEB76FBBFAEBFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAF9D2D8DE6A031491463CB3 /* Pods_On_The_Map_Udacity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5729CF10201BDAC4002B41F9 /* Build configuration list for PBXNativeTarget "On-The-Map-Udacity" */;
 			buildPhases = (
+				0A753101B7A417917E2F41D1 /* [CP] Check Pods Manifest.lock */,
 				5729CEFA201BDAC4002B41F9 /* Sources */,
 				5729CEFB201BDAC4002B41F9 /* Frameworks */,
 				5729CEFC201BDAC4002B41F9 /* Resources */,
+				77759220C9EA02E1DFD6333D /* [CP] Embed Pods Frameworks */,
+				3CF79326645EA72D7C6041DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,6 +257,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A753101B7A417917E2F41D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-On-The-Map-Udacity-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CF79326645EA72D7C6041DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-On-The-Map-Udacity/Pods-On-The-Map-Udacity-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77759220C9EA02E1DFD6333D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-On-The-Map-Udacity/Pods-On-The-Map-Udacity-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-On-The-Map-Udacity/Pods-On-The-Map-Udacity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5729CEFA201BDAC4002B41F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -244,6 +330,7 @@
 				5729CF34201C0F0E002B41F9 /* MapTableViewController.swift in Sources */,
 				5729CF2C201BF2A8002B41F9 /* BorderedButton.swift in Sources */,
 				5729CF1C201BDFE8002B41F9 /* StudentData.swift in Sources */,
+				5794EB1A20634F4100F6A867 /* InteractionPanToClose.swift in Sources */,
 				5729CF3A201C1D95002B41F9 /* SubmitLocationMapViewController.swift in Sources */,
 				5729CF38201C1D72002B41F9 /* AddNewLocationViewController.swift in Sources */,
 				5729CF1A201BDE33002B41F9 /* GCDBlackBox.swift in Sources */,
@@ -384,6 +471,7 @@
 		};
 		5729CF11201BDAC4002B41F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20D91F902103F8E07ECFDEAB /* Pods-On-The-Map-Udacity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -399,6 +487,7 @@
 		};
 		5729CF12201BDAC4002B41F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546164FD00D047939E84366E /* Pods-On-The-Map-Udacity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
