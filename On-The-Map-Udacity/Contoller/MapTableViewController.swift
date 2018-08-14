@@ -45,7 +45,7 @@ class MapTableViewController: UITableViewController {
         let selectedCell = StudentData.studentLocations[indexPath.row]
         if let url = URL(string: selectedCell.webURL) {
             if UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             }else{
                 performUIUpdatesOnMain {
                     self.displayAlert(title: "Invalid URL", message: "Selected URL unable be opened.")
@@ -75,3 +75,8 @@ class MapTableViewController: UITableViewController {
 
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
+}

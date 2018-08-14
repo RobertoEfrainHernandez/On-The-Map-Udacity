@@ -39,7 +39,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 performUIUpdatesOnMain {
                     self.displayAlert(title: "Invalid URL", message: "Unable to get student locations.")
                 }
-                print(error)
+                print(error as Any)
             }
         }
     }
@@ -97,7 +97,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             if let annotation = view.annotation, let urlString = annotation.subtitle {
                 if let url = URL(string: urlString!) {
                     if app.canOpenURL(url) {
-                        app.open(url, options: [:], completionHandler: nil)
+                        app.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
                     } else {
                         displayAlert(title: "Invalid URL", message: "Selected URL unable to be opened.")
                     }
@@ -108,3 +108,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             }
         }
     }
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
+}

@@ -48,7 +48,7 @@ class SubmitLocationMapViewController: UIViewController, MKMapViewDelegate {
         annotations.append(annotation)
         
         /* Zoom into a specific region */
-        let span = MKCoordinateSpanMake(1, 1)
+        let span = MKCoordinateSpan.init(latitudeDelta: 1, longitudeDelta: 1)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         
         performUIUpdatesOnMain {
@@ -62,8 +62,8 @@ class SubmitLocationMapViewController: UIViewController, MKMapViewDelegate {
     /***************************************************************/
     private func backToTabBarView(){
         performUIUpdatesOnMain {
-            let alert = UIAlertController(title: "New location Added", message: "Successfully submitted a new location!", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
+            let alert = UIAlertController(title: "New location Added", message: "Successfully submitted a new location!", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
                 (action) -> Void in
                 self.performSegue(withIdentifier: "unwindMapView", sender: self)
             }))
@@ -80,8 +80,8 @@ class SubmitLocationMapViewController: UIViewController, MKMapViewDelegate {
                 performUIUpdatesOnMain {
                     self.displayAlert(title: "Submission Error", message: "Uable to complete your request")
                     self.dismiss(animated: true, completion: nil)
-                }
-                print(error)
+            }
+                print(error as Any)
             } else {
                 if let objectId = results {
                     StudentData.objectId = objectId

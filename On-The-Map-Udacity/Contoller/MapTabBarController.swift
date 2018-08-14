@@ -30,7 +30,7 @@ class MapTabBarController: UITabBarController {
                     self.dismiss(animated:true,completion:nil)
                 }
             } else {
-                print(errorString)
+                print(errorString as Any)
             }
         }
     }
